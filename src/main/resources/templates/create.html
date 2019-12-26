@@ -1,0 +1,19 @@
+<main role="main" th:fragment="create" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+	<form class="" th:action="@{/create/save}" th:object="${post}"  method="post">
+		<h2>Create Post</h2>
+
+		<label for="image">Imagen (URL)</label>
+		<div class="input-group mb-3">
+			<input type="text" th:field="*{image}" class="form-control" id="image" placeholder="Image" value="" required name="image">
+		</div>
+
+		<label for="post">Publicacion</label>
+		<div class="input-group mb-3">
+			<textarea class="form-control" th:field="*{description}" id="post" placeholder="Text" value="" required name="post" rows="8" cols="80"></textarea>
+		</div>
+
+		<div class="input-group mb-3">
+			<input class="form-control btn btn-primary" type="submit" value="PUBLICAR POST">
+		</div>
+	</form>
+</main>

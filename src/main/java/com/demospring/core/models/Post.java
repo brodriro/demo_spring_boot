@@ -9,6 +9,11 @@ public class Post {
 	private String image;
 	private Date date;
 	
+	
+	public Post() {
+		
+	}
+	
 	public Post(int id, String description, String image, Date date) {
 		super();
 		this.id = id;
