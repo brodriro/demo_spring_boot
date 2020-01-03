@@ -50,6 +50,8 @@ public class IndexController {
 	@PostMapping("/create/save")
 	public RedirectView savePost(@ModelAttribute Post post) {
 		post.setId(allPosts.size() -1 );
+		post.setDate(new Date());
+		
 		this.allPosts.add(post);
 		
 		RedirectView redirectView = new RedirectView("/", true);
